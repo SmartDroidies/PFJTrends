@@ -1,0 +1,47 @@
+<ion-view view-title="PFJ Trends">
+  <ion-content>
+    <!-- Slider on home page -->
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+        <ion-slide ng-repeat="image in images">
+           <div class="box blue">
+             <!--h1>{{image.title}}</h1-->
+             <img ng-src="{{image.url}}" style="width:100%;height:150px;margin:auto;display:block">
+           </div>
+      	</ion-slide>
+      <!--ion-slide>
+        <div class="box blue"><h1>BLUE</h1></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box yellow"><h1>YELLOW</h1></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box pink"><h1>PINK</h1></div>
+      </ion-slide-->
+    </ion-slide-box>
+
+    <!-- Banner 1  on home page -->
+    <div class="card">
+        <img ng-src="http://www.ghank.com/wp-content/uploads/2013/05/slider3.jpg" style="width:100%;height:100px;margin:auto;display:block">
+    </div>
+
+    <!-- Grid View to showcase products -->
+    <div class="row">
+      <div class="col" ng-repeat="product in products">
+        <img ng-src="{{product.url}}" style="width:100%;height:100px;margin:auto;display:block">
+      </div>
+    </div>
+
+    <!-- Banner 2 on home page -->
+    <div class="card">
+        <img ng-src="http://www.ghank.com/wp-content/uploads/2013/05/slider3.jpg" style="width:100%;height:100px;margin:auto;display:block">
+    </div>
+
+    <!-- Grid View to showcase products -->
+    <div class="row">
+      <div class="col" ng-repeat="product in products">
+        <img ng-src="{{product.url}}" style="width:100%;height:100px;margin:auto;display:block">
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
